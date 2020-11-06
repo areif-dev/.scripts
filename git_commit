@@ -1,0 +1,13 @@
+#!/bin/bash
+git status
+read -p "Stage and push all changes? [Y/n] " cont
+
+if [ $cont == 'y' ] || [ $cont == 'Y' ]
+then
+    git add .
+    read -p "Message: " msg
+    git commit -m $msg
+    git push
+else
+    echo Cancelled
+fi
