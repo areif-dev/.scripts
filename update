@@ -1,0 +1,12 @@
+#!/bin/bash
+sudo apt update
+apt list --upgradable
+echo "Continue to upgrade? (y/n) " 
+read cont
+
+if [ $cont == 'y' ] || [ $cont == 'Y' ]
+then
+    sudo apt upgrade -y && sudo apt autoremove
+else
+    echo Cancelled
+fi
