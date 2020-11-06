@@ -12,8 +12,8 @@ To quickly reference scripts from anywhere in the system add .scripts/ to PATH
 - Add this line to the bottom:
   - export PATH=~/.scripts:$PATH
 - Press <ctrl+x>
-- Press <Y>
-- Press <Enter>
+- Press \<Y>
+- Press \<Enter>
 - Enter "source ~/.bashrc"
   
 All the scripts should be executable immediatly after installation, but in case they are not
