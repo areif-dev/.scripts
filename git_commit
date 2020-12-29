@@ -5,7 +5,8 @@ read -p "Stage and push all changes? [Y/n] " cont
 if [ $cont == 'y' ] || [ $cont == 'Y' ]
 then
     read -p "Message: " msg
-    git commit -a -m "$msg"
+    git add -A
+    git commit -m "$msg"
     git push
 else
     echo Cancelled
