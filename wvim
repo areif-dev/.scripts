@@ -1,5 +1,0 @@
-#!/bin/bash
-
-cp ~/.vimrc ~/.vimrc_back
-cp ~/.scripts/vimrcs/wvimrc ~/.vimrc
-vim $1

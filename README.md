@@ -51,11 +51,3 @@ dl is a simplification of the youtube-dl program that is specifically for downlo
 
 -   Enter dl followed by the id of the video to download audio from
 -   E.G. dl nyTCBEmYEaQ
-
-### Cvim and Wvim Scripts
-
-cvim and wvim are distrobutions of vim. Both will make a copy of your current vimrc in the home directory called .vimrc_back if an existing vimrc exists. Running either script will replace .vimrc with either .wvimrc or .cvimrc from the .scripts/vimrcs directory.
-
--   Cvim is optimized to promote coding
--   Wvim is optimized to promote standard document writing
--   To use either, simply call cvim or wvim with the desired file you wish to open
