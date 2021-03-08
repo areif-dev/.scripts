@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Make the main root directory and the first package directory
+mkdir -p $1/$1
+cd $1
+touch $1/__init__.py $1/__main__.py
+
+# Initialize the main file of package directory with main method
+echo "if __name__ == \"__main__\":
+    
+    pass" >> $1/__main__.py
+
+# Start empty git repo
+git init
+echo "$1/__pycache__/" >> .gitignore
+echo "virtual" >> .gitignore
+
+# Initialize a README with the project name
+echo "# $1" >> README.md
+
+# Create a virtual environment called virtual in the root directory
+python3 -m venv virtual
+
+# Add a license file to the root directory
+touch LICENSE
