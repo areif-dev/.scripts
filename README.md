@@ -61,3 +61,6 @@ dl is a simplification of the youtube-dl program that is specifically for downlo
 Used to initialize a new Python 3 project. Uses the default Python 3 instance. Will create a root directory with LICENSE, README.md, .gitignore, an empty git repo, and a beginning package of the same name as the project
 
 -   Takes one argument: the name of the project to start in the current directory
+```
+createpython new_project
+```
