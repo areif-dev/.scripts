@@ -6,10 +6,10 @@ Custom Linux scripts to help with setup and common operations.
 
 It is recommended that the .scripts/ directory is installed in the user's home directory
 
-```
+``` bash
 cd
 ```
-```
+``` bash
 git clone http://github.com/areif-dev/.scripts.git
 ```
 
