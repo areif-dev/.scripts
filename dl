@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 -m youtube_dl -x --audio-format m4a --prefer-ffmpeg https://www.youtube.com/watch?v=$1
+python3 -m youtube_dl -x --audio-quality 128k --audio-format m4a --prefer-ffmpeg https://www.youtube.com/watch?v=$1

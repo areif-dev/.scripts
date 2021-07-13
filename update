@@ -5,7 +5,7 @@ read -p "Continue to upgrade? [Y/n] " cont
 
 if [ $cont == 'y' ] || [ $cont == 'Y' ]
 then
-    sudo apt upgrade -y && sudo apt autoremove
+    sudo apt upgrade -y --allow-downgrades && sudo apt autoremove
 else
     echo Cancelled
 fi
