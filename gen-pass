@@ -1,0 +1,15 @@
+#!/bin/python3
+
+import random
+
+passw = ""
+for i in range(16):
+    val = random.randint(33, 122)
+    while val in (34, 39, 92, 96):
+        val = random.randint(33, 122)
+
+    passw += chr(val)
+
+print(passw)
+
+
