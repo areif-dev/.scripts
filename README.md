@@ -39,11 +39,11 @@ The update script is used to combine the apt update, upgrade, and autoremove com
 -   Enter "y" or "n" to continue installing or quit, respectively
 -   All upgradable packages will then be upgraded and autoremoved
 
-### git_commit Script
+### git-commit Script
 
-The git_commit script is used to automatically stage, commit, and push all changes in a git repo
+The git-commit script is used to automatically stage, commit, and push all changes in a git repo
 
--   Enter "git_commit"
+-   Enter "git-commit" somewhere in the repo to of choide. Ideally in the root directory where the .git folder is
 -   A list of all changes to the git repo will be displayed along with a prompt to continue
 -   Enter "y" or "n" to continue with the commit or to quit, respectively
 -   Enter the commit message when prompted
@@ -51,7 +51,7 @@ The git_commit script is used to automatically stage, commit, and push all chang
 
 ### dl Script
 
-dl is a simplification of the youtube-dl program that is specifically for downloading music in the m4a loss-less format. It will require youtube-dl and ffmpeg packages to be preinstalled
+dl is a distribution of the youtube-dl program that is specifically for downloading music in the m4a loss-less format. It will require youtube-dl and ffmpeg packages to be preinstalled
 
 -   Enter dl followed by the id of the video to download audio from
 -   E.G. dl nyTCBEmYEaQ
