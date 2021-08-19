@@ -53,8 +53,8 @@ The git-commit script is used to automatically stage, commit, and push all chang
 
 dl is a distribution of the youtube-dl program that is specifically for downloading music in the m4a loss-less format. It will require youtube-dl and ffmpeg packages to be preinstalled
 
--   Enter dl followed by the id of the video to download audio from
--   E.G. dl nyTCBEmYEaQ
+-   Enter dl followed by the url of the video to download audio from
+-   E.G. dl https://www.youtube.com/watch?v=012345678901
 
 ### create_python Script
 
