@@ -8,8 +8,6 @@ It is recommended that the .scripts/ directory is installed in the user's home d
 
 ``` bash
 cd
-```
-``` bash
 git clone http://github.com/areif-dev/.scripts.git
 ```
 
