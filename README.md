@@ -50,6 +50,7 @@ The git-commit script is used to automatically stage, commit, and push all chang
 -   All changes to the branch will then be staged, committed, and pushed to a remote repo if applicable
 
 #### With Commandline Args
+alkdjs;lfk
 
 ``` bash
 git-commit -y -m "Changes made"

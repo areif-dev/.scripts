@@ -1,34 +1,14 @@
 #!/bin/bash
 
-confirm=0
-msg=""
+git status
+read -p "Stage and push all changes? [Y/n] " cont
 
-while getopts y:m: flag 
-do 
-    case "${flag}" in 
-        y) confirm=1;;
-        m) msg=${OPTARG};;
-    esac
-done
-
-
-if [ confirm == 0 ] && [ msg == "" ]
+if [ $cont == 'y' ] || [ $cont == 'Y' ]
 then
-    git status
-    read -p "Stage and push all changes? [Y/n] " cont
-
-    if [ $cont == 'y' ] || [ $cont == 'Y' ]
-    then
-        read -p "Message: " msg
-        git add -A
-        git commit -m "$msg"
-        git push
-    else
-        echo Cancelled
-    fi
-
-else
+    read -p "Message: " msg
     git add -A
-    git commit -m $msg
+    git commit -m "$msg"
     git push
+else
+    echo Cancelled
 fi
