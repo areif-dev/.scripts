@@ -41,11 +41,19 @@ The update script is used to combine the apt update, upgrade, and autoremove com
 
 The git-commit script is used to automatically stage, commit, and push all changes in a git repo
 
--   Enter "git-commit" somewhere in the repo to of choide. Ideally in the root directory where the .git folder is
+#### Without Commandline Args
+
+-   Enter "git-commit" somewhere in the repo of choice. Ideally in the root directory where the .git folder is
 -   A list of all changes to the git repo will be displayed along with a prompt to continue
 -   Enter "y" or "n" to continue with the commit or to quit, respectively
 -   Enter the commit message when prompted
 -   All changes to the branch will then be staged, committed, and pushed to a remote repo if applicable
+
+#### With Commandline Args
+
+``` bash
+git-commit -y -m "Changes made"
+```
 
 ### dl Script
 

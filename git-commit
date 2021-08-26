@@ -1,23 +1,18 @@
 #!/bin/bash
 
-hasArgs = 0
+confirm=0
+msg=""
 
-if [ ! -z $1 ] && [ ! -z $2 ] && [ ! -z $3 ]
-then
-    if [ $1 == '-y' ] || [ $2 == '-Y' ]
-    then
-        if [ $2 == '-m' ]
-        then
-            hasArgs = 1
-            
-            git add -A 
-            git commit -m "$3"
-            git push
-        fi
-    fi
-fi
+while getopts y:m: flag 
+do 
+    case "${flag}" in 
+        y) confirm=1;;
+        m) msg=${OPTARG};;
+    esac
+done
 
-if [ $hasArgs == 0 ]
+
+if [ confirm == 0 ] && [ msg == "" ]
 then
     git status
     read -p "Stage and push all changes? [Y/n] " cont
@@ -31,4 +26,9 @@ then
     else
         echo Cancelled
     fi
+
+else
+    git add -A
+    git commit -m $msg
+    git push
 fi
