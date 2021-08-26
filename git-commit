@@ -1,13 +1,34 @@
 #!/bin/bash
-git status
-read -p "Stage and push all changes? [Y/n] " cont
 
-if [ $cont == 'y' ] || [ $cont == 'Y' ]
+hasArgs = 0
+
+if [ ! -z $1 ] && [ ! -z $2 ] && [ ! -z $3 ]
 then
-    read -p "Message: " msg
-    git add -A
-    git commit -m "$msg"
-    git push
-else
-    echo Cancelled
+    if [ $1 == '-y' ] || [ $2 == '-Y' ]
+    then
+        if [ $2 == '-m' ]
+        then
+            hasArgs = 1
+            
+            git add -A 
+            git commit -m "$3"
+            git push
+        fi
+    fi
+fi
+
+if [ $hasArgs == 0 ]
+then
+    git status
+    read -p "Stage and push all changes? [Y/n] " cont
+
+    if [ $cont == 'y' ] || [ $cont == 'Y' ]
+    then
+        read -p "Message: " msg
+        git add -A
+        git commit -m "$msg"
+        git push
+    else
+        echo Cancelled
+    fi
 fi
